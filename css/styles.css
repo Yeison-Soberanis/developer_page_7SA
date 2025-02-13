@@ -1,7 +1,19 @@
+:root{
+    /* Asi se pone los colores de forma general */
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    font-family: Krub, Helvetica, sans-serif;  /*Es para poner el tipo de letra*/
+}
+
 html{
     font-size: 62.5%;
+    font-family: Krub, Helvetica, sans-serif;
 }
 body{
+    /* 16px es el tamaño por defecto que asigna un navegador */
     font-size: 16px;
 }
 
@@ -13,3 +25,53 @@ body{
 .titulo span{
     font-size: 2rem;
 }
+
+.navegacion-principal{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    max-width: 120rem;  /*es para el tamaño maximo de tu navegador*/
+    /* margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    margin: 0 auto; /*asi se pone el margen automatico*/
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal a{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navegacion-principal{
+    /* padding: 1rem; Es el relleno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /*centrar los elementos*/
+    /* Justify-content para filas y
+    align-items para columnas */
+    justify-content: space-between; /*Es espacion que hay en la parte de navigacion osea inicio,sobre etc*/
+    font-size: 2rem;
+    font-weight: bold; /*Para poner en negritas*/
+}
+
+/* Si al menos tiene 768px (table) osea que si al menos son 768px pon todo en una solo fila la navegacion */
+@media (min-width: 768px) {
+    .navegacion-principal{
+       flex-direction: row;
+       justify-content: space-between;
+    }
+   }
+
+.navegacion-principal a:hover{ /*hover es una seudo clase para el efecto de cuando pasas tu mouse por el nav*/
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
