@@ -75,3 +75,12 @@ body{
     color: var(--oscuro);
 }
 
+
+.hero{
+    /* ../ es para salir de una carpeta */
+    background-image: url("../img/hero.jpg");
+    /*  al momento de de expandir la pagina no repite las la imagen */
+    background-repeat: no-repeat; 
+    /* Cover cubre la imagen con todo el tamaño */
+    background-size: cover;
+}
