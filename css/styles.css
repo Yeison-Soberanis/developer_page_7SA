@@ -11,6 +11,28 @@
 html{
     font-size: 62.5%;
     font-family: Krub, Helvetica, sans-serif;
+    /*Hack para modelo de caja*/
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after{
+    /* Hack para modelo de caja */
+    box-sizing: inherit;
+}
+
+/* Tipografia */
+
+h1{
+    font-size: 3.8rem
+}
+h2{
+    font-size: 2.8rem
+}
+h3{
+    font-size: 1.8rem
+}
+h1,h2,h3{
+    text-align: center;
 }
 body{
     /* 16px es el tamaño por defecto que asigna un navegador */
@@ -83,4 +105,62 @@ body{
     background-repeat: no-repeat; 
     /* Cover cubre la imagen con todo el tamaño */
     background-size: cover;
+    height: 450px; /*Altura del elemento hero*/
+    position: relative; /*Sirve para manipular la posicion,
+    el padre siempre debe ser relative*/
+}
+
+.contenido-hero{
+    /*Sirve para manipular la posicion,
+    el hijo siempre debe ser absolute*/
+    position: absolute;
+    background-color: rgba(0,0,0,.7); /*Al 70% el alpha es el efecto de la imagen con un toque un poco oscuro*/
+    width: 100%;
+    height: 100%;
+    /* Alinear vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*para centar la columna*/
+    justify-content: center;
+}
+/* .hero .titulo h2{
+    color: var(--blanco);
+} */
+
+.contenido-hero p,
+.contenido-hero h2 {
+    color: var(--blanco);
+}
+
+/* para centrar el logo de ubicacion */
+.ubicacion{
+    display: flex;
+    align-items: flex-end
+}
+.boton {
+    background-color: var(--secundario); /*color del boton*/
+    color: var(--blanco); /*color del texto*/
+    /* Espacio interior al botton. El primer valor es 
+    top-botton, el segundo valor right-left */
+    padding: 1rem 3rem;
+    margin-top: 3rem; /*Margen hacia arriba */
+    font-size: 2rem; /*Tamaño de letra*/
+    /* Quitar el subrayado */
+    text-decoration: none;
+    /* Convertir texto en mayusculas */
+    text-transform: uppercase;
+    /* Texto en negritas */
+    font-weight: bold;
+    /* Borde redondeado */
+    border-radius: .5rem; 
+    /* Ancho del boton  */
+    width: 90%;
+    /* Centrado */
+    text-align: center;
+}
+/* para que se ajuste el tamaño del botton dependiendo de la pantalla  */
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
 }
