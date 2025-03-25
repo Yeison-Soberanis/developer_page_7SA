@@ -86,26 +86,27 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis molestias iusto possimus enim modi ab.</p>
         </section>
         </div> <!-- Cierre de servicios-->
-    </main>
+
 
 
 
     <section>
         <h2>Contacto</h2>
-        <form>
+        <form class="formulario">
             <fieldset> <!-- organizar en grupos de un formulario -->
+                <div class="contenedor-campos">
                 <legend>Llena tus datos</legend> <!-- representa un título para un elemento <fieldset>. -->
-                <div>
+                <div class="campo">
                     <label>Nombre</label> <!-- elemento en una interfaz de usuario -->
                     <input type="text" placeholder="Tu nombre">
                 </div>
 
-                <div>
+                <div class="campo">
                     <label>Telefono</label>
                     <input type="tel" placeholder="Tu telefono">
                 </div>
 
-                <div>
+                <div class="campo">
                     <label>Correo</label>
                     <input type="email" placeholder="Tu correo">
                 </div>
@@ -115,14 +116,15 @@
                         <textarea></textarea>
                     </label>
                 </div>
-
-                <div>
-                    <input type="submit" value="Enviar">
+                </div> <!-- Cierre de contenedor-campos-->
+                <div class="alinear-derecha flex">
+                    <input class="boton w-sm-100" type="submit" value="Enviar">
                 </div>
 
             </fieldset>
         </form>
     </section>
+    </main>
 
 
 
